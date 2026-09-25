@@ -3,8 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Our Community</title>
+    <title>Join Our Official Community</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #151c2e;
+            --accent-blue: #0088cc;
+            --accent-red: #ff0000;
+            --text-main: #ffffff;
+            --text-sub: #94a3b8;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -13,90 +23,167 @@
         }
 
         body {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            min-height: 100vh;
+            background-color: var(--bg-color);
+            color: var(--text-main);
             display: flex;
             justify-content: center;
             align-items: center;
+            min-height: 100vh;
             padding: 20px;
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 40px 30px;
-            border-radius: 20px;
-            text-align: center;
-            max-width: 400px;
+            max-width: 480px;
             width: 100%;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 136, 204, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            padding: 3px;
+        }
+
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #000;
         }
 
         h1 {
-            color: #ffffff;
-            font-size: 26px;
-            margin-bottom: 10px;
+            font-size: 24px;
+            margin-bottom: 8px;
+            font-weight: 700;
         }
 
         p {
-            color: #d1d5db;
+            color: var(--text-sub);
             font-size: 14px;
-            margin-bottom: 30px;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+
+        .stats-box {
+            display: flex;
+            justify-content: space-around;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 12px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        .stat-item h3 {
+            font-size: 16px;
+            color: var(--text-main);
+        }
+
+        .stat-item span {
+            font-size: 12px;
+            color: var(--text-sub);
         }
 
         .btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 12px;
             width: 100%;
-            padding: 15px;
+            padding: 14px;
             margin-bottom: 15px;
             border-radius: 12px;
             text-decoration: none;
-            font-weight: bold;
             font-size: 16px;
+            font-weight: 600;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         .btn-telegram {
-            background-color: #0088cc;
+            background-color: var(--accent-blue);
             color: white;
+            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
         }
 
         .btn-telegram:hover {
-            background-color: #006699;
-            transform: translateY(-3px);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 136, 204, 0.6);
         }
 
         .btn-youtube {
-            background-color: #ff0000;
+            background-color: var(--accent-red);
             color: white;
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
         }
 
         .btn-youtube:hover {
-            background-color: #cc0000;
-            transform: translateY(-3px);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 0, 0, 0.6);
+        }
+
+        .btn-instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: white;
+            box-shadow: 0 4px 15px rgba(220, 39, 67, 0.4);
+        }
+
+        .btn-instagram:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(220, 39, 67, 0.6);
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: var(--text-sub);
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Welcome to Our Hub</h1>
-        <p>Latest updates aur exclusive content ke liye humare channels ko join karein!</p>
+        <div class="profile-img">
+            <img src="https://via.placeholder.com/100" alt="Community Logo">
+        </div>
 
-        <!-- Change Telegram Link Here -->
-        <a href="https://t.me/Notyourtypeclose" class="btn btn-telegram" target="_blank">
-            Join Telegram Channel
+        <h1>Join Our Official Hub</h1>
+        <p>Daily updates, exclusive content, and live community interaction. Connect with us!</p>
+
+        <div class="stats-box">
+            <div class="stat-item">
+                <h3>10K+</h3>
+                <span>Members</span>
+            </div>
+            <div class="stat-item">
+                <h3>Daily</h3>
+                <span>Updates</span>
+            </div>
+        </div>
+
+        <!-- Links Replace Karein Niche -->
+        <a href="https://t.me/Notyourtypeclose" target="_blank" class="btn btn-telegram">
+            <i class="fab fa-telegram-plane"></i> Join Telegram Channel
         </a>
 
-        <!-- Change YouTube Link Here -->
-        <a href="https://www.youtube.com/@closetorealitytv" class="btn btn-youtube" target="_blank">
-            Subscribe YouTube Channel
+        <a href="https://www.youtube.com/@closetorealitytv" target="_blank" class="btn btn-youtube">
+            <i class="fab fa-youtube"></i> Subscribe On YouTube
         </a>
+
+        <a href="https://www.instagram.com/closetoreality7" target="_blank" class="btn btn-instagram">
+            <i class="fab fa-instagram"></i> Follow On Instagram
+        </a>
+
+        <div class="footer">
+            © Official Community. All Rights Reserved.
+        </div>
     </div>
 
 </body>
